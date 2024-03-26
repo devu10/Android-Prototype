@@ -13,7 +13,8 @@ import java.util.ArrayList;
 public class FileHelper {
     public static final String FILENAME = "listinfo.dat";
 
-    public static void writeData(ArrayList<String> item, Context context){
+    public static void writeData(ArrayList<String> item, Context context)
+    {
         try {
             FileOutputStream fos = context.openFileOutput(FILENAME, Context.MODE_PRIVATE);
             ObjectOutputStream oas = new ObjectOutputStream(fos);
@@ -41,6 +42,6 @@ public class FileHelper {
         } catch (ClassNotFoundException e) {
             e.printStackTrace();
         }
-return itemList;
+        return itemList;
     }
 }
